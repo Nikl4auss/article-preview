@@ -1,7 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import ArticleComponent from "./articleComponent";
 
 function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <React.Fragment>
+      <ArticleComponent />
+    </React.Fragment>
+  );
 }
 
 export default App;

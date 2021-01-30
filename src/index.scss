@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+$primary: hsl(217, 19%, 35%);
+$secondary: hsl(214, 17%, 51%);
+$terciary: hsl(212, 23%, 69%);
+$forth: hsl(210, 46%, 95%);
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.3rem;
+  background-color: $forth;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 90%;
+  background-color: #ffffff;
+  margin: 2rem auto;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  .article-img {
+    max-width: 100%;
+  }
+}
+
+.article-info {
+  padding: 2rem;
+  .title {
+    color: $primary;
+    font-weight: 700;
+  }
+  .text {
+    color: $secondary;
+  }
+}
+
+footer {
+  padding-bottom: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .author-container {
+    display: flex;
+    align-items: center;
+  }
+  .author-avatar {
+    width: 4.5rem;
+    margin-right: 1.5rem;
+    border-radius: 50%;
+  }
+  .author-info {
+    .author {
+      margin: 0;
+      color: $primary;
+      font-weight: 700;
+    }
+    .date {
+      margin: 0;
+      color: $secondary;
+    }
+  }
+
+  .share-icon-padding {
+    padding: 0.5rem;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    transition: background-color 0.5s;
+    &:hover {
+      background-color: $forth;
+    }
+    &:hover .share-icon {
+      color: $primary;
+    }
+  }
+  .share-icon {
+    display: block;
+    font-size: 2rem;
+    color: $secondary;
+    transition: color 0.5s;
+  }
+  .media-container {
+    position: absolute;
+    top: -10%;
+    background-color: $primary;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    width: 33.8rem;
+    height: 7rem;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .share-text {
+      color: $terciary;
+      font-weight: 700;
+      letter-spacing: 0.5rem;
+    }
+    .icon {
+      font-size: 2rem;
+      color: white;
+      margin-right: 1.5rem;
+      transition: color 0.5s;
+      &:hover {
+        color: $terciary;
+      }
+    }
+    .share-icon-padding:hover {
+      background-color: $secondary;
+
+      & .share-icon {
+        color: white;
+      }
+    }
+    .share-icon {
+      color: white;
+    }
+  }
+}
+
+.attribution {
+  text-align: center;
+  text-decoration: none;
+  a {
+    text-decoration: none;
+    color: $secondary;
+    transition: color 0.5s;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
